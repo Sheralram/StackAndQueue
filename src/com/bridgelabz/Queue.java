@@ -29,8 +29,17 @@ public class Queue {
             while (temp != null) {
                 System.out.print(temp.data+ " ");
                 temp = temp.next;
+                System.out.print(" ");
             }
         }
+    }
+    public void dequeue(){
+        if(isEmpty()){
+            System.out.println("QUEUE is Empty.Please add Data to delete ");
+        }
+        else
+            front=front.next;
+
     }
 
     public static void main(String[] args) {
@@ -38,6 +47,11 @@ public class Queue {
         queue.enqueue(56);
         queue.enqueue(30);
         queue.enqueue(70);
+        System.out.println("The Elements in Queue is ");
+        queue.display();
+
+        System.out.println("The Elements after delete in Queue is ");
+        queue.dequeue();
         queue.display();
 
     }
